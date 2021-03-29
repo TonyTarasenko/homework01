@@ -44,24 +44,16 @@ undefined + 5 > null + 1; //false. Поскольку слева нет стро
 var userAge = +prompt('Enter your age please', 'Your age');
 
 if(userAge === 0 || 
-   userAge >= 5 && 
-   userAge<=20) {
-    alert(userAge + ' лет');
-
-} else if ((userAge - 1) % 10 === 0) {
-    alert  (userAge + ' год');
-
-} else if ((userAge - 2) % 10 === 0 ||
-           (userAge - 3) % 10 === 0 || 
-           (userAge - 4) % 10 === 0) {
-    alert(userAge + ' года');
-
-} else if ((userAge - 5) % 10 === 0 ||
-           (userAge - 6) % 10 === 0 ||
-           (userAge - 7) % 10 === 0 ||
-           (userAge - 8) % 10 === 0 ||
-           (userAge - 9) % 10 === 0 ||
-           userAge % 10 === 0) {
-               alert(userAge + ' лет');
-           }
-
+    userAge >= 5 && 
+    userAge<=20) {
+     alert(userAge + ' лет');
+    } else if (userAge % 10 === 1) {
+        alert (userAge + ' год');
+    } else if (userAge % 10 >=2 && 
+               userAge % 10 <= 4) {
+        alert (userAge + ' года');
+    } else if (userAge % 10 >=5 && 
+               userAge % 10 <= 9 || 
+               userAge % 10 === 0) {
+        alert (userAge + ' лет');
+    }
