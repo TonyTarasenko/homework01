@@ -61,8 +61,8 @@
 var heightOfTree = +prompt('Enter height of tree');
 var tree = '';
 
-for (i = 1; i <= heightOfTree; i++) {
-    for (j = 1; j <= heightOfTree + heightOfTree - 1; j++) {
+for (var i = 1; i <= heightOfTree; i++) {
+    for (var j = 1; j <= heightOfTree + heightOfTree - 1; j++) {
         if (j <= heightOfTree - i || j >= heightOfTree + i) {
             tree += ' ';
         } else {
