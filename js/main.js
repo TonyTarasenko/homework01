@@ -167,3 +167,34 @@ function charIndexOf (string, char) {
     }
     return -1;
 }
+
+function camelize (str) {
+    var stringsInCamel = [];
+    for (var elem of str) {
+            var eachWord = elem.split('-');
+            var wordInCamel = eachWord[0]
+          for (var i = 1; i < eachWord.length; i++) {
+            var allLetters = eachWord[i].split('');
+            allLetters[0] = allLetters[0].toUpperCase();
+            wordInCamel += allLetters.join('');
+          }
+          stringsInCamel.push(wordInCamel)
+    }
+    return stringsInCamel;
+}
+
+function myFilter (arr, callback) {
+    var result = [];
+    for (var value of arr) {
+            if (Boolean (callback(value))) result[result.length] = value; 
+    }
+    return result;
+}
+
+function myMap (arr, callback) {
+    var result = [];
+    for (var value of arr) {
+            result[result.length] = callback(value);
+    }
+    return result;
+}
